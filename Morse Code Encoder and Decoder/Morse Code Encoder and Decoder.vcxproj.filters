@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Text.txt">
+    <Text Include="Morse Code.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
