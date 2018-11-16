@@ -146,15 +146,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="Morse Code.txt" />
+    <Text Include="MorseCode.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Converter.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="Converter.h" />
     <ClInclude Include="Hash Table.h" />
-    <ClInclude Include="Morse Tree.h" />
+    <ClInclude Include="MorseTree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
