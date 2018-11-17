@@ -15,7 +15,7 @@ void Converter::parse() {
 		string code = line.substr(1);
 		BTNode *morse_root = morse_tree.get_root();
 		morse_tree.add_letter(morse_root, code, letter);
-		hash_table.add_letter(letter, code);
+		morse_hash.add_letter(letter, code);
 	}
 	morse.close();
 }
@@ -65,7 +65,7 @@ string Converter::encode(string in) {
 	string letter;
 	for (string::iterator iter = in.begin(); iter != in.end(); iter++) {
 		letter = *iter;
-		result.append(hash_table.get_morse_version(letter));
+		result.append(morse_hash.get_morse_version(letter));
 		result.append(" ");
 	}
 	return result;
