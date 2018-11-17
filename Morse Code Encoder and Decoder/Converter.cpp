@@ -11,11 +11,11 @@ void Converter::parse() {
 
 	while (morse.good()) {
 		morse >> line;
-		string letter = line.substr(0, 1);
+		string value = line.substr(0, 1);
 		string code = line.substr(1);
-		BTNode *morse_root = morse_tree.get_root();
-		morse_tree.add_letter(morse_root, code, letter);
-		morse_hash.add_letter(letter, code);
+		BTNode *morse_root = code_tree.get_root();
+		code_tree.addValue(morse_root, code, value);
+		morse_hash.addValue(value, code);
 	}
 	morse.close();
 }
@@ -41,7 +41,7 @@ string Converter::search(BTNode *&node, string in) {
 string Converter::decode(string in) {
 	char token = ' ';
 	string code = "";
-	BTNode *root = morse_tree.get_root();
+	BTNode *node = code_tree.get_root();
 	string result = "";
 
 	for (int i = 0; i < in.size(); i++) {
@@ -49,11 +49,11 @@ string Converter::decode(string in) {
 		if (token != ' ') {
 			code += token;
 			if (i == in.size() - 1) {
-				result += search(root, code);
+				result += search(node, code);
 			}
 		}
 		else if (token == ' ') {
-			result += search(root, code);
+			result += search(node, code);
 			code = "";
 		}
 	}
@@ -62,10 +62,10 @@ string Converter::decode(string in) {
 
 string Converter::encode(string in) {
 	string result = "";
-	string letter;
+	string value;
 	for (string::iterator iter = in.begin(); iter != in.end(); iter++) {
-		letter = *iter;
-		result.append(morse_hash.get_morse_version(letter));
+		value = *iter;
+		result.append(morse_hash.get_morse_version(value));
 		result.append(" ");
 	}
 	return result;

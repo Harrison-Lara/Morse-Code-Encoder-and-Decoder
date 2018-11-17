@@ -5,16 +5,16 @@
 class Converter {
 private:
 
-	MorseTree morse_tree;
+	MorseTree code_tree;
 	CodeHash morse_hash;
 
 public:
 	Converter() {
-		morse_tree = MorseTree();
+		code_tree = MorseTree();
 	}
 
 	void parse();
-	string search(BTNode *&node, string in);
-	string decode(string in);
-	string encode(string in);
+	string search(BTNode *&node, string input);
+	string decode(string input);
+	string encode(string input);
 };

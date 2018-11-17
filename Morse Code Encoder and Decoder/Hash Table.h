@@ -4,6 +4,7 @@
 using namespace std;
 
 class CodeHash {
+
 private:
 
 	unordered_map<string, string> map;
@@ -12,7 +13,7 @@ public:
 
 	CodeHash() {}
 
-	void add_letter(string value, string code) {
+	void addValue(string value, string code) {
 		map[value] = code;
 	};
 

@@ -14,19 +14,19 @@ public:
 		Binary_Tree();
 	}
 
-	void add_letter(BTNode *&node, string code, string letter) {
+	void addValue(BTNode *&node, string code, string value) {
 
 		if (node == NULL) {
 			node = new BTNode();
 		}
 		if (code.size() == 0) {
-			node->data = letter;
+			node->data = value;
 		}
 		else if (code[0] == '.') {
-			add_letter(node->left, code.substr(1), letter);
+			addValue(node->left, code.substr(1), value);
 		}
 		else if (code[0] == '_') {
-			add_letter(node->right, code.substr(1), letter);
+			addValue(node->right, code.substr(1), value);
 		}
 	}
 };

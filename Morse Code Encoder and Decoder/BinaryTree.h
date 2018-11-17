@@ -9,10 +9,10 @@ struct BTNode {
 	BTNode *right;
 
 	//Default constructor
-	BTNode(string data_val = "", BTNode *left_val = NULL, BTNode *right_val = NULL) {
-		data = data_val;
-		left = left_val;
-		right = right_val;
+	BTNode(string values = "", BTNode *value_left = NULL, BTNode *value_right = NULL) {
+		data = values;
+		left = value_left;
+		right = value_right;
 	}
 
 	//Destructor
@@ -20,34 +20,36 @@ struct BTNode {
 };
 
 class Binary_Tree {
+
 public:
-	BTNode *root;
+
+	BTNode *node;
 
 	Binary_Tree() {
-		root = new BTNode();
+		node = new BTNode();
 	}
 
-	Binary_Tree(BTNode *newroot) {
-		root = newroot;
+	Binary_Tree(BTNode *newnode) {
+		node = newnode;
 	}
 
-	Binary_Tree(const string & the_data, const Binary_Tree & left = Binary_Tree(), const Binary_Tree & right = Binary_Tree()) {
-		root = new BTNode(the_data, left.root, right.root);
+	Binary_Tree(const string & values, const Binary_Tree & left = Binary_Tree(), const Binary_Tree & right = Binary_Tree()) {
+		node = new BTNode(values, left.node, right.node);
 	}
 
 	BTNode* get_root() {
-		return root;
+		return node;
 	}
 
 	void set_root(BTNode *data) {
-		root = data;
+		node = data;
 	}
 
 	Binary_Tree get_left_subtree() {
-		return Binary_Tree(root->left);
+		return Binary_Tree(node->left);
 	}
 
 	Binary_Tree get_right_subtree() {
-		return Binary_Tree(root->right);
+		return Binary_Tree(node->right);
 	}
 };
