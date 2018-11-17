@@ -4,7 +4,8 @@
 #include <fstream>
 using namespace std;
 
-class MorseTree : public Binary_Tree {	
+class MorseTree : public Binary_Tree {
+
 private:
 
 
@@ -14,6 +15,7 @@ public:
 		Binary_Tree();
 	}
 
+	//assemble tree by adding values to left or right tree
 	void addValue(BTNode *&node, string code, string value) {
 
 		if (node == NULL) {

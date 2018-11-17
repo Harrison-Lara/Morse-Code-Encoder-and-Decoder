@@ -6,8 +6,8 @@ void main() {
 
 	Converter code;
 	code.parse();
-	string test = code.decode("_...");
-	string test1 = code.encode("Computer Science");
+	string test = code.decode("_..."); // change value for testing
+	string test1 = code.encode("Computer Science"); //change value for testing
 	cout << test << "\n" << " " << test1 << endl;
 
 }

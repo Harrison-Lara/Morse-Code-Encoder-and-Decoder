@@ -33,18 +33,22 @@ public:
 		node = newnode;
 	}
 
+	//assigning node to value for left and right nodes
 	Binary_Tree(const string & values, const Binary_Tree & left = Binary_Tree(), const Binary_Tree & right = Binary_Tree()) {
 		node = new BTNode(values, left.node, right.node);
 	}
 
+	//getter
 	BTNode* get_root() {
 		return node;
 	}
 
+	//setter
 	void set_root(BTNode *data) {
 		node = data;
 	}
 
+	//getters for left and right tree
 	Binary_Tree get_left_subtree() {
 		return Binary_Tree(node->left);
 	}

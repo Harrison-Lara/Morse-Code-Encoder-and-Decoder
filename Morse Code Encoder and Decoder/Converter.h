@@ -9,10 +9,12 @@ private:
 	CodeHash morse_hash;
 
 public:
+
 	Converter() {
 		code_tree = MorseTree();
 	}
 
+	//parse and take input for encoding and decoding
 	void parse();
 	string search(BTNode *&node, string input);
 	string decode(string input);
