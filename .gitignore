@@ -241,3 +241,5 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 /Morse Code Encoder and Decoder/Morse Tree.h
+/Morse Code Encoder and Decoder/MorseTree.h
+/Morse Code Encoder and Decoder/Converter.cpp

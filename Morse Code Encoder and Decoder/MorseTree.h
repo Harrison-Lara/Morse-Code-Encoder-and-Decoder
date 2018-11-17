@@ -4,19 +4,18 @@
 #include <fstream>
 using namespace std;
 
-class MorseTree : public Binary_Tree {		//Derived class MorseTree from Binary_Tree
+class MorseTree : public Binary_Tree {	
 private:
 
 
 public:
-	//Default constructor
+
 	MorseTree() {
 		Binary_Tree();
 	}
 
-	//Member funtions
 	void add_letter(BTNode *&node, string code, string letter) {
-		//Add the letter to the tree in the correct position based on the reading of morse.txt
+
 		if (node == NULL) {
 			node = new BTNode();
 		}

@@ -1,5 +1,5 @@
 #include "MorseTree.h"
-#include "HashTable.h"
+#include "Hash Table.h"
 #pragma once
 
 class Converter {
